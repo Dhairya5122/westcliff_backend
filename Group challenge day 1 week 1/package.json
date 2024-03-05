@@ -1,0 +1,12 @@
+{
+  "name": "git",
+  "version": "1.0.0",
+  "description": "git",
+  "main": "server.js",
+  "scripts": {
+    "test": "f",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
