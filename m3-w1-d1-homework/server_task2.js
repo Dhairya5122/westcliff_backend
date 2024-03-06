@@ -8,7 +8,7 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { "Content-Type": "text/html" });
 
   // Check the URL and send appropriate response
-  if (req.url === "/") {
+  if (req.url === "/home") {
     // Read the content of index.html file
     fs.readFile("index.html", "utf8", (err, data) => {
       if (err) {
@@ -19,16 +19,16 @@ const server = http.createServer((req, res) => {
     });
   } else if (req.url === "/about") {
     // Read the content of index.html file
-    fs.readFile("index.html", "utf8", (err, data) => {
+    fs.readFile("about.html", "utf8", (err, data) => {
       if (err) {
         res.end("Error reading the HTML file");
       } else {
         res.end(data);
       }
     });
-  } else if (req.url === "/contact1") {
+  } else if (req.url === "/contact") {
     // Read the content of index.html file
-    fs.readFile("index.html", "utf8", (err, data) => {
+    fs.readFile("contact.html", "utf8", (err, data) => {
       if (err) {
         res.end("Error reading the HTML file");
       } else {
@@ -48,5 +48,5 @@ const server = http.createServer((req, res) => {
 
 // Listen on port 3000
 server.listen(5000, () => {
-  console.log("Server is running on http://localhost:5000/");
+  console.log("Server is connected running on http://localhost:5000/home");
 });

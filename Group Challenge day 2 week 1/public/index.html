@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ExpressJS App</title>
+    <style>
+      .main {
+        background: lightcyan;
+        padding: 20px;
+        width: 300px;
+        border: 1px solid black;
+      }
+      .form input {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Login</h1>
+      <form action="/login" method="post" class="form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" />
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
