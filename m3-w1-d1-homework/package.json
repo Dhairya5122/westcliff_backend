@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "nodemon server_task1.js "
+    "start": "nodemon server_task1.js"
   },
   "dependencies": {
     "nodemon": "^3.1.0"
