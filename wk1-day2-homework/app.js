@@ -1,39 +1,37 @@
-const http = require("http");
-const fs = require("fs");
-const path = require("path"); // Import the 'path' module
 const express = require("express");
+const app = express();
 
-const app = express(); // Create an Express app
+// Set up the view engine to use Pug
+app.set("view engine", "pug");
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static("public"));
 
-// Set up a route to handle requests
+// Set up a route to handle req uests
 app.get("/", (req, res) => {
-  console.log("The NodeJS server on port 3000 is now running...");
-
-  // Set the response header
-  res.writeHead(200, { "Content-Type": "text/html" });
-
-  // Read the content of index.html file
-  fs.readFile("food_blog.html", "utf8", (err, data) => {
-    if (err) {
-      res.end("Error reading the HTML file");
-    } else {
-      res.end(data);
-    }
+  res.render("home", {
+    posts: [
+      {
+        profilepic: "/images/profile1.jpg",
+        name: "John Doe",
+        date: "2023-03-22",
+        reply: "5",
+        message: "This is a sample post",
+      },
+      {
+        profilepic: "/images/profile2.jpg",
+        name: "Jane Doe",
+        date: "2023-03-21",
+        reply: "3",
+        message: "Another sample post",
+      },
+    ],
   });
 });
 
 // Set up a route to handle 404 errors
 app.use((req, res) => {
-  fs.readFile("404.html", "utf8", (err, data) => {
-    if (err) {
-      res.end("Error reading the HTML file");
-    } else {
-      res.status(404).end(data);
-    }
-  });
+  res.status(404).render("404");
 });
 
 // Listen on port 3000

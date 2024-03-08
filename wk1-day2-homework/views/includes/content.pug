@@ -1,0 +1,37 @@
+<div id="container">
+      <header><headcomp></headcomp></header>
+
+      <main>
+        <aside id="photos">
+          <img src="/images/chili.jpg" alt="White Chicken Chili" width="180" />
+        </aside>
+        <h2><blogtitle></blogtitle></h2>
+
+        <section id="blogposts">
+          <ul>
+            <li id="posts" v-for="post in posts">
+              <span class="profile">
+                <img v-bind:src="post.profilepic" v-on:click="authorinfo(posts, post)" />
+              </span>
+              <span class="author">{{ post.name }}</span> —
+              <span class="date">{{ post.date }}</span>
+              <span class="reply">{{ post.reply }}</span>
+              <p>{{ post.message }}</p>
+            </li>
+            <div id="info_box" v-for="post in posts" v-if="post.thisBox">
+              <p class="closeBtn closeBtnP" v-on:click="$emit('close', post.thisBox = false)" >&#10006;</p>
+              <div id="info_title">{{ post.name }}</div>
+              <div id="info_foodie">
+                <span>Foodie Level: </span>{{ post.foodielevel }}
+              </div>
+              <div id="info_bio">
+                <span>Bio:<br /></span>{{ post.bio }}
+              </div>
+              <button class="closeBtn closeBtnB" v-on:click="$emit('close', post.thisBox = false)" >
+                Close
+              </button>
+              <p id="close_info"></p>
+            </div>
+          </ul>
+        </section>
+      </main>
