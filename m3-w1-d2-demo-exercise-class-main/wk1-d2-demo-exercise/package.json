@@ -1,0 +1,22 @@
+{
+  "name": "exercise-exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exp_demo1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhruv1897/wk1-d2-demo-exercise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhruv1897/wk1-d2-demo-exercise/issues"
+  },
+  "homepage": "https://github.com/dhruv1897/wk1-d2-demo-exercise#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
+}
