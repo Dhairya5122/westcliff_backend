@@ -1,0 +1,51 @@
+.globalstyles,
+html,
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.card {
+  width: 33.33333%;
+  margin-bottom: 16px !important;
+}
+.card .card-info {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid rgb(175, 174, 174) !important;
+  text-align: center;
+}
+.card .card-info li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+.card .card-info li:last-child {
+  border-bottom: none;
+}
+.card .card-shadow:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card .card-header {
+  color: #fff !important;
+  background-color: #000 !important;
+  font-size: 24px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+.card .card-info .card-item {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.card .card-info .card-item span {
+  font-weight: bold;
+}
+.card .card-info .card-item .card-wide {
+  letter-spacing: 4px;
+}
+.card .card-info .card-item .card-opacity {
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=styles.css.map */
