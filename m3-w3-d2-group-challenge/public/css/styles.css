@@ -48,4 +48,9 @@ body {
   opacity: 0.6;
 }
 
+.signup-button {
+  background-color: green;
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */
