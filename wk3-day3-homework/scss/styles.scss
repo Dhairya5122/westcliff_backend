@@ -1,10 +1,63 @@
-/* Variables */
-
+// Variables
+$primary-color: #ff6347;
+$font-family-primary: "Sacramento", cursive;
 
 /* Nest Main */
 main {
-    width: 1350px;
-    min-height:535px;
+  width: 1350px;
+  min-height: 535px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 }
 
-// Mixin or Extend for button
+/* Intro Text */
+#intro-text {
+  text-align: center;
+
+  span {
+    font-family: $font-family-primary;
+    font-size: 3rem;
+    color: $primary-color;
+  }
+
+  h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .submit-buttton {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+
+/* Intro Image */
+#intro-image {
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 2rem 0;
+  color: #666;
+}

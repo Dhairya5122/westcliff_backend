@@ -1,0 +1,56 @@
+/* Nest Main */
+main {
+  width: 1350px;
+  min-height: 535px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  align-items: center;
+}
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Intro Text */
+#intro-text {
+  text-align: center;
+}
+#intro-text span {
+  font-family: "Sacramento", cursive;
+  font-size: 3rem;
+  color: #ff6347;
+}
+#intro-text h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+#intro-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+#intro-text .submit-buttton {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Intro Image */
+#intro-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 2rem 0;
+  color: #666;
+}
+
+/*# sourceMappingURL=styles.css.map */
