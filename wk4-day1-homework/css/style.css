@@ -69,7 +69,28 @@ body {
   font-size: 1em;
   text-align: center;
   padding: 10px;
-  background-color: #0a0506;
+  background-color: #ff69b4;
   color: white;
   margin-top: 2rem;
+}
+.collection_text {
+  background: #ff69b4;
+  color: white;
+  font-weight: 700;
+}
+.new_text {
+  text-align: left;
+}
+.consectetur_text {
+  text-align: left;
+}
+.sale_text strong span,
+.number_text strong,
+.seemore {
+  color: #ff69b4;
+}
+
+.seemore {
+  background-color: #ff69b4;
+  color: white;
 }
