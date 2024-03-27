@@ -1,0 +1,99 @@
+@primary-color: #0a0506;
+@primary-font-color: #21191a;
+
+body {
+  color: @primary-font-color;
+  font-family: "Poppins", sans-serif;
+}
+
+.main-layout {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.collection_text {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: @primary-color;
+  padding: 1rem;
+}
+
+.about_main {
+  width: 100%;
+  padding: 50px;
+}
+
+.collection_section {
+  text-align: center;
+  padding: 0 1rem;
+
+  .new_text {
+    font-size: 2em;
+    color: @primary-color;
+    padding: 1rem;
+  }
+
+  .consectetur_text {
+    font-size: 1.2em;
+    padding: 1rem;
+  }
+}
+
+.collectipn_section_3 {
+  .racing_shoes {
+    display: flex;
+    align-items: center;
+    background: rgb(234, 231, 231);
+    padding: 70px;
+
+    .shoes-img3 {
+      img {
+        width: 70%;
+      }
+    }
+
+    .sale_text {
+      strong {
+        color: @primary-color;
+        display: block;
+        font-size: 3em;
+        margin-bottom: 10px;
+
+        &:first-child {
+          color: #0a0506;
+        }
+      }
+    }
+
+    .number_text {
+      strong {
+        font-size: 3em;
+        color: @primary-color;
+      }
+    }
+
+    .seemore {
+      width: 80%;
+      height: 50px;
+      color: white;
+      background-color: @primary-color;
+      font-size: 1.7em;
+      margin-top: 35px;
+    }
+  }
+}
+
+.copyright {
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+  padding: 10px;
+  background-color: @primary-color;
+  color: white;
+  margin-top: 2rem;
+}

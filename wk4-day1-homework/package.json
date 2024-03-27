@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "less-plugin-clean-css": "^1.5.1"
+  }
+}
