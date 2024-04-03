@@ -1,0 +1,140 @@
+/* .card {
+  border-color: #4f2908;
+  background-color: #4cacaf;
+}
+.btn {
+  color: #4CAF50;
+  background-color: #211170;
+}
+.highlight {
+  color: #4CAF50;
+  background-color: #211170;
+}
+.globalstyle,
+html,
+body {
+  font-family: Verdana, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.button {
+  border-radius: 100px;
+}
+.avatar {
+  border-radius: 100px;
+}
+.card .card-info {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #afaeae !important;
+  text-align: center;
+}
+.card .card-info li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+.card .card-info li:last-child {
+  border-bottom: none;
+}
+.card .card-info li .card-item {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+.card .card-info li .card-item span {
+  font-weight: bold;
+}
+.card .card-info li .card-item.card-wide {
+  letter-spacing: 4px;
+}
+.card .card-info li .card-item.card-opacity {
+  opacity: 0.6;
+}
+.card .card-info li .card-btn {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+.card .card-info li .card-btn .button {
+  color: #fff !important;
+  background-color: #4CAF50 !important;
+  padding: 12px 24px !important;
+}
+.card .card-shadow:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card .card-header {
+  color: #fff !important;
+  background-color: #000 !important;
+  font-size: 24px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+} */
+
+.card {
+  border-color: #4f2908;
+  background-color: #4cacaf;
+}
+
+.card-info {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #afaeae !important;
+  text-align: center;
+}
+
+.card-info li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.card-info li:last-child {
+  border-bottom: none;
+}
+
+.card-info li .card-item {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
+
+.card-info li .card-item span {
+  font-weight: bold;
+}
+
+.card-info li .card-item.card-wide {
+  letter-spacing: 4px;
+}
+
+.card-info li .card-item.card-opacity {
+  opacity: 0.6;
+}
+
+.card-info li .card-btn {
+  color: #000 !important;
+  background-color: #f1f1f1 !important;
+  padding-top: 24px !important;
+  padding-bottom: 24px !important;
+}
+
+.card-info li .card-btn .button {
+  color: #fff !important;
+  background-color: #4caf50 !important;
+  padding: 12px 24px !important;
+}
+
+.card-shadow:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-header {
+  color: #fff !important;
+  background-color: #000 !important;
+  font-size: 24px !important;
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+.button:hover {
+  background-color: red;
+}
