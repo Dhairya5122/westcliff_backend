@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Midule 4 Week 1 Assignment</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.11/vue.js"></script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <div class="header">
+        <h1>Fresh Food To Go</h1>
+      </div>
+      <div id="vue">
+        <div v-for="item in catalogItems" :key="item.id">
+          <img :src="item.image" alt="" />
+          <h2>{{ item.name }}</h2>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+
+      <script>
+        new Vue({
+          el: "#vue",
+          data: {
+            catalogItems: [
+              {
+                id: 1,
+                name: "Pasta",
+                description: "Healthy Pasta",
+                image:
+                  "https://upload.wikimedia.org/wikipedia/commons/f/f0/Spaghetti_aglio%2C_olio_e_peperoncino_%2816284859030%29.jpg",
+              },
+              {
+                id: 2,
+                name: "Item 2",
+                description: "This is item 2",
+                image: "path/to/image2.jpg",
+              },
+              {
+                id: 3,
+                name: "Item 3",
+                description: "This is item 3",
+                image: "path/to/image3.jpg",
+              },
+            ],
+          },
+        });
+      </script>
+    </div>
+  </body>
+</html>
