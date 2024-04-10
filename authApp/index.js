@@ -8,6 +8,10 @@ const expressSession = require("express-session")({
   secret: "secret",
   resave: false,
   saveUninitialized: false,
+  cookie: {
+    secure: false,
+    maxAge: 60000,
+  },
 });
 
 app.use(bodyParser.json());
@@ -92,6 +96,6 @@ app.get("/logout", (req, res) => {
   req.logOut(), res.sendFile("html/logout.html", { root: __dirname });
 });
 
-UserDetails.register({ username: "paul", active: false }, "paul");
-UserDetails.register({ username: "joy", active: false }, "joy");
-UserDetails.register({ username: "ray", active: false }, "ray");
+// UserDetails.register({ username: "paul", active: false }, "paul");
+// UserDetails.register({ username: "joy", active: false }, "joy");
+// UserDetails.register({ username: "ray", active: false }, "ray");
