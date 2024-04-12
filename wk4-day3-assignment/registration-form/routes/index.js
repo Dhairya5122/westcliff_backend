@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const path = require("path");
 const auth = require("http-auth");
 const { check, validationResult } = require("express-validator");
+const bcrypt = require("bcrypt");
 
 const router = express.Router();
 const Registration = mongoose.model("Registration");
@@ -13,21 +14,6 @@ const basic = auth.basic({
 router.get("/", (req, res) => {
   //res.send('It works!');
   res.render("form", { title: "Registration form" });
-});
-
-router.get("/data", async (req, res) => {
-  try {
-    // Fetch registrations from the database
-    const registrations = await Registration.find();
-
-    // Render the Pug template with the fetched registrations
-    res.render("index", { title: "Fetching the Data", registrations });
-  } catch (error) {
-    // Log any errors that occur during the data retrieval process
-    console.error("Error fetching registrations:", error);
-    // Send an error response
-    res.status(500).send("Sorry! Something went wrong.");
-  }
 });
 
 router.get(
@@ -48,12 +34,25 @@ router.post(
   [
     check("name").isLength({ min: 1 }).withMessage("Please enter a name"),
     check("email").isLength({ min: 1 }).withMessage("Please enter an email"),
+    check("username")
+      .isLength({ min: 1 })
+      .withMessage("Please enter an username"),
+    check("password")
+      .isLength({ min: 1 })
+      .withMessage("Please enter an password"),
   ],
-  (req, res) => {
+  async (req, res) => {
     //console.log(req.body);
     const errors = validationResult(req);
     if (errors.isEmpty()) {
       const registration = new Registration(req.body);
+
+      //adding the salt method
+
+      const salt = await bcrypt.genSalt(10);
+
+      registration.password = await bcrypt.hash(registration.password, salt);
+
       registration
         .save()
         .then(() => {
