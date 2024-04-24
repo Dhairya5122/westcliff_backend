@@ -1,0 +1,36 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <title>Hello</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="white">
+
+</head>
+<body class="fullscreen">
+  <div class="container">
+    <main id="content">
+      <div id="msg">
+      <h3>What's Your Name?</h3>
+      <input type="text" id="name"><br>
+      <button id="enterBtn">Enter</button>
+      </div>
+      <p id="date"></p>
+    </main>
+  </div>
+
+  <script src="./js/main.js"> </script>
+  
+  <script>
+    //let msg = document.getElementById("name").value;
+    document.getElementById("enterBtn").addEventListener("click", getMsg);
+    function getMsg() {
+      document.getElementById("msg").innerHTML = "Hello " + document.getElementById("name").value;
+      document.getElementById("date").innerHTML = "<h3>The Current Date & Time is: </h3>" + Date();
+    }
+    </script>
+
+</body>
+</html>
